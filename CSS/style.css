@@ -1,0 +1,1152 @@
+/* Global styling  */
+body
+{
+    margin: 0px;
+}
+
+
+/* set the text properties */
+h1,h2,h3,h4,h5,h6
+{
+    font-family: 'Montserrate',sans-serif;
+}
+p,a,li
+{
+    font-size: 1.2em;
+    font-family: 'Inter',sans-serif;
+    text-decoration: none;
+}
+
+/* Page Styling  */
+.indexBody
+{
+    display: grid;
+    grid-template-columns:  20% repeat(3,26.67%);
+    grid-template-areas: 
+        "header header header header"
+        "side main main main "
+        "footer footer footer footer";
+}
+
+
+/* css for header */
+header.indexHeader
+{
+    grid-area: header;
+    z-index: 999;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    background-color: #EFFAFD;
+    width: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* css for website logo */
+header.indexHeader > div
+{
+    height: 100px;
+}
+
+header.indexHeader > div:last-child
+{
+    margin: 0 0 0 10px;
+    display: none;
+}
+header.indexHeader > div:last-child > button
+{
+    height: 80px;
+    width: auto;
+    border: none;
+    background: none;
+}
+header.indexHeader > div:last-child > button >img
+{
+    height: 40px;
+    width: auto;
+}
+
+header.indexHeader > div >a > img
+{
+    width: 85px;
+    height: auto;
+    margin: 13px 0 0 20px
+}
+
+/* css for navigation bar and links  */
+header.indexHeader > nav
+{
+    margin: 0 15px 0 0;
+}
+header.indexHeader > nav > menu
+{
+    list-style: none;
+    display: flex;
+    
+}
+header.indexHeader > nav > menu > li
+{
+    padding: 0 15px;
+    
+}
+header.indexHeader > nav > menu > li > a
+{
+    color: #0b8baf;
+}
+header.indexHeader > nav > menu > li > a:nth-child(1):hover,
+header.indexHeader > nav > menu > li > a:nth-child(2):hover,
+header.indexHeader > nav > menu > li > a:nth-child(3):hover,
+header.indexHeader > nav > menu > li > a:nth-child(4):hover
+{
+    border-bottom: 3px solid #0D4354;
+}
+header.active1 > nav > menu > li > a#activeLink1,
+header.active2 > nav > menu > li > a#activeLink2,
+header.active3 > nav > menu > li > a#activeLink3,
+header.active4 > nav > menu > li > a#activeLink4
+{
+    border-bottom: 3px solid #0D4354;
+}
+
+header.indexHeader > nav > menu > li > span.loginBtn
+{
+    background-color: #4CAF50;
+    display: inline-block;
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    border-radius: 25px;
+    color: #efefef;
+}
+header.indexHeader > nav > menu > li > span.loginBtn:hover
+{
+    background-color: #45a049;
+    border-bottom: none;
+}
+menu.showMenu
+{
+    display: flex !important;
+}
+
+/* css for sign up and login form */
+
+.backgroundBlur 
+{
+    position: fixed;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    display: none;
+}
+
+.formContainer 
+{
+    position: fixed;
+    margin: 100px 0;
+    background-color: #a6e4f5;
+    padding: 20px;
+    border-radius: 5px;
+    z-index: 101;
+    width: 380px;
+    display: none;
+}
+
+.formContainer h2 
+{
+    color: #333333;
+    font-size: 24px;
+    margin:0 0 10px 0;
+}
+  
+.formContainer form 
+{
+    margin-top: 20px;
+}
+  
+.formContainer form label 
+{
+    display: block;
+    margin-bottom: 5px;
+    color: #333333;
+}
+
+.formContainer >form >div >input[type="email"],
+.formContainer >form >div >input[type="password"]
+{
+    width: 95%;
+    padding: 8px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+#loginForm >form >div:nth-child(3) 
+{
+    display: flex;
+    flex-direction: row;
+}
+  
+div.formContainer> form > input[type="submit"] 
+{
+    background-color: #4a90e2;
+    color: #ffffff;
+    cursor: pointer;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    margin: 5px 0 0 0;
+    transition: background-color 0.3s;
+}
+  
+.formContainer input[type="submit"]:hover 
+{
+    background-color: #357ae8;
+}
+  
+.closeBtn 
+{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #ff5a5f;
+    color: #fafafa;
+    border: none;
+    border-radius: 5px;
+}
+
+  
+/* css for main container */
+.indexMain
+{
+    grid-area: main;
+    background-color: #4A8BDF;
+    margin: 80px 0 0 0;
+
+}
+
+/* css for product heading  */
+section.productIntro
+{
+    color: #efefef;
+    margin: 2%;
+    
+}
+
+section.productIntro > div 
+{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+section.productIntro > div > h1
+{
+    font-size: 4.3em;
+    letter-spacing: 1px;
+    font-family: 'Agdasima', sans-serif;
+    margin: 10px 0;
+}
+section.productIntro > div > span
+{
+    margin: 0 0 0 10px;
+}
+
+/* css for product information  */
+section.newProduct
+{
+    margin: 2% 1%;
+    
+}
+
+div.newProduct
+{
+    margin: 1%;
+    border-radius: 12px;
+    background-color: #EFFAFD;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);  
+    
+}
+div.newProduct > div.firstPara
+{
+    display: flex;
+    flex-direction: row;
+    border-radius: 12px 12px 0 0;
+    background-color: #7e8eb6;
+    background-image: linear-gradient(#d6d6d6, #EFFAFD);
+    
+}
+
+div.newProduct > div
+{   
+    padding: 1%;
+}
+div.newProduct > div.firstPara  >div
+{
+    flex-grow: 1;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+div.newProduct > div:nth-child(1)  >div >h2
+{
+    font-size: 3.3em;
+}
+
+/* css for product image  */
+div.newProduct > div > img
+{
+    margin: 2px;
+    width: auto;
+    height: 300px;
+    border-radius: 2px;
+}
+section.viewAll
+{
+    margin: 2%;
+    color: #efefef;
+}
+section.viewAll > div
+{
+    background-color: #EFFAFD;
+}
+
+/* css for applications provided by windows 3.0 software */
+div.applications > div
+{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    border-bottom: 1px solid #112A46;
+}
+div.applications > div > div
+{
+    margin: 0 0 0 5px;
+}
+div.applications > div:nth-child(odd)
+{
+    flex-direction: row-reverse;
+}
+div.applications > div:first-child
+{
+    border-bottom: none;
+}
+div.applications > div > img
+{
+    width: 350px;
+}
+
+/* css for css for product information with dropdown menu */
+div.productInformation 
+{
+    margin: 1%;
+    border-radius: 12px;
+    background-color: #EFFAFD;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+div.productInformation > h2 
+{
+    text-align: center;
+    padding: 2% 1% 1% 1%;
+}
+div.productInformation >div 
+{
+    margin: 20px 0 0 0;
+}
+
+div.productInformation >div 
+{
+    margin: 0 0 20px 0;
+}
+div.productInformation >div > div 
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+div.productInformation >div > div >img
+{
+    width: 30px;
+    height: auto;
+    margin: 0 30px 0 0;
+}
+
+div.productInformation >div >div:first-child 
+{
+    cursor: pointer;
+    padding: 0 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+div.productInformation >div > div:hover
+{
+    background-color: #C0DAF7;
+}
+
+div.productInformation >div > div.hiddenInformation 
+{
+    display: none;
+    padding: 10px;
+    border-radius: 5px;
+    transition: display 0.1s;
+}
+div.productInformation >div > div.showInformation 
+{
+    display: block;
+}
+
+
+div.productInformation >div > .hiddenInformation p 
+{
+    margin: 5px 0;
+}
+
+.arrow 
+{
+    transition: transform 0.3s;
+}
+.rotate 
+{
+    transform: rotate(180deg);
+}
+  
+
+/* css for software requirment table */
+div.productRequirment
+{
+    flex-direction: row;
+    margin: 1%;
+    border-radius: 12px;
+    background-color: #EFFAFD;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+div.phoneSize
+{
+    display: none;
+}
+div.productRequirment > div:first-child
+{
+    display: flex;
+    margin: 0 1%;
+    text-align: center;
+    justify-content: center;
+}
+
+div.productRequirment > div:nth-child(2),
+div.productRequirment > div.phoneSize
+{
+    margin: 0 1%;
+    display: flex;
+    flex-direction: column;
+}
+div.productRequirment > div:nth-child(2) > div,
+div.productRequirment > div.phoneSize > div
+{
+    display: flex;
+    flex-direction: row;
+    margin: 5px;
+}
+
+div.productRequirment > div:nth-child(2) >div> p,
+div.productRequirment > div.phoneSize >div> p
+{
+    margin: 5px;
+}
+div.productRequirment > div:nth-child(2) >div:hover,
+div.productRequirment > div.phoneSize >div:hover
+{
+    background-color: #C0DAF7;
+    border-radius: 3px;
+}
+
+div.productRequirment > div:nth-child(2) >div> p:first-child,
+div.productRequirment > div.phoneSize >div> p:first-child
+{
+    display: flex;
+    align-items: center;
+    width: 20%;
+    font-size: 20px;
+    font-weight: 700;
+}
+div.productRequirment > div.window3 >div> p:nth-child(2)
+{
+    display: flex;
+    align-items: center;
+    width: 80%;
+    word-wrap: break-word;
+}
+div.productRequirment > div.phoneSize
+{
+    display: none;
+}
+/* this system requirment for windows 2.0 and 1.0 */
+div.productRequirment > div:nth-child(2)> div.window1_2 >p:nth-child(2),
+div.productRequirment > div:nth-child(2)> div.window1_2 >p:nth-child(3)
+{
+    width: 40%;
+}
+div.productRequirment > div.phoneSize> div.window1_2 >p:nth-child(2)
+{
+    width: 80%;
+}
+div.productRequirment > div:nth-child(2)> div.window1_2:first-child >p:nth-child(2),
+div.productRequirment > div:nth-child(2)> div.window1_2:first-child >p:nth-child(3),
+div.productRequirment > div.phoneSize> div.window1_2:first-child >p:nth-child(2),
+div.productRequirment > div.phoneSize> div.window1_2:nth-child(8)>p:nth-child(2)
+{
+    text-align: center;
+    font-weight: bold;
+}
+
+/* css for pricing and licensing of the software */
+div.productPricing 
+{
+    display: flex;
+    flex-direction: column;
+    margin: 1%;
+    border-radius: 12px;
+    background-color: #EFFAFD;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+  
+div.productPricing > div 
+{
+    padding: 1% 1% 0 1%;
+}
+  
+div.productPricing > div:first-child 
+{
+    text-align: center;
+    justify-content: center;
+}
+  
+div.productPricing > div:nth-child(1) > div ,
+div.productPricing > div:nth-child(2) 
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+div.productPricing > div:nth-child(2) > div 
+{
+    flex-basis: 50%;
+    text-align: center;
+    padding: 1%;
+}
+  
+div.productPricing > div:nth-child(2) > div .btn 
+{
+    display: inline-block;
+    margin: 1%;
+    padding: 10px 20px;
+    font-size: 16px;
+    width: 270px;
+    text-decoration: none;
+    border-radius: 8px;
+    background-color: #4CAF50;
+    color: #efefef;
+    border: none;
+}
+
+div.productPricing > div:nth-child(2) > div .btn:hover 
+{
+  background-color: #45a049;
+}
+
+/* css for view all button */
+
+div.viewProduct
+{
+    display: flex;
+    align-items: center;
+    margin: 1%;
+    border-radius: 12px;
+    background-color: #EFFAFD;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    height: 50px;
+}
+
+div.viewProduct > a
+{
+    display: inline-block;
+    width: 100%;
+    color: #1b1a1a;
+    margin: 0 0 0 10px;
+}
+
+/* css for about section */
+div.newProduct >div > p:hover
+{
+    background-color: #C0DAF7;
+    border-radius: 5px;
+    padding: 4px;
+}
+
+
+/* css for side bar */
+.indexSide
+{
+    grid-area: side;
+    position: relative;
+    margin: 80px 0 0 0;
+    background-color: #C0DAF7;
+    color: #112A46;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+.indexSide > div
+{
+    z-index: 2;
+    position: sticky;
+    top: 100px;
+    display: flex;
+    flex-direction: column;
+    margin: 50px 0 0 0 ;
+    justify-content: center;
+    overflow: hidden;
+}
+.indexSide > div > div
+{
+    padding: 10px;
+    font-family:'Inter',sans-serif ;
+    font-size: 21px;
+}
+.indexSide > div > div:last-child
+{
+    margin: 0 0 100px 0;
+}
+.highlight
+{
+    background-color: #5782b3;
+    border-radius: 32px;
+    color: #efefef;
+}
+
+/* css for footer of website */
+
+footer.indexFooter 
+{
+    grid-area: footer;
+    background-color: #224367;
+    padding: 15px 0 0 0;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px -4px 20px 0px, rgba(0, 0, 0, 0.69) 0px 5px 20px 0px;
+    z-index: 10;
+
+}
+
+footer.indexFooter > div {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+footer.indexFooter > div > div 
+{
+    max-width: 300px;
+}
+
+footer.indexFooter h3 
+{
+    color: #efefef;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+footer.indexFooter p 
+{
+    color: #d1e4f0;
+}
+
+footer.indexFooter > div:last-child 
+{
+    color: #efefef;
+    font-size: 14px;
+}
+
+.indexFooter > div 
+{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.indexFooter > div > div 
+{
+    flex-basis: 20%;
+}
+
+.indexFooter > div > div h3 
+{
+    font-size: 18px;
+    margin:0 0 10px 0;
+}
+
+.indexFooter > div > div:first-child > p 
+{
+    line-height: 28.1px;
+}
+
+.indexFooter > div > div > ul
+{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}   
+
+.indexFooter > div > div ul li
+{
+    margin: 0 0 5px 0;
+}
+
+.indexFooter > div > div ul li a
+{
+    color: #efefef;
+}
+
+.indexFooter>div > div > ul > li > a:hover 
+{
+    color: #0b8baf;
+}
+
+.indexFooter > div > div > form 
+{
+    position: relative;
+}
+
+.indexFooter > div > div > form> input
+{
+    height: 30px;
+    border: none;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.indexFooter > div > div > form> input:focus,
+.indexFooter > div > div > form> input:nth-child(2):focus {
+    outline: none;
+    background-color: #d4d4d4;
+}
+
+.indexFooter > div > div > form input:nth-child(2) 
+{
+    margin-top: 10px;
+    cursor: pointer;
+    color: #fff;
+    background-color: #0b8baf;
+    transition: background-color 0.3s;
+}
+
+.indexFooter > div > div > form input:nth-child(2):hover 
+{
+    background-color: #1289aa;
+}
+
+.indexFooter>div > div > ul > li > a 
+{
+    transition: color 0.3s;
+}
+  
+/* css for bottom section of footer */
+.indexFooterBottom 
+{
+  text-align: center;
+  margin-top: 20px;
+}
+
+.indexFooterBottom p 
+{
+  font-size: 12px;
+}
+  
+/* css for form.html */
+body.formBody
+{
+    display: flex;
+    flex-direction: column;
+}
+
+/* css for form introduction  */
+section.formIntro
+{
+    color: #efefef;
+    margin: 2%;
+    
+}
+
+section.formIntro > h1
+{
+    font-size: 3.9em;
+    letter-spacing: 1px;
+    font-family: 'Agdasima', sans-serif;
+    margin: 10px 0;
+}
+
+/* css for feedback form  */
+div.feedbackForm
+{
+    margin: 1%;
+    border-radius: 12px;
+    background-color: #EFFAFD;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+    
+}
+div.feedbackForm > div
+{
+    display: flex;
+    flex-direction: row;
+    border-radius: 12px;
+    background-color: #EFFAFD;
+    padding: 1%;
+    
+}
+
+form.feedbackForm 
+{
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #C0DAF7;
+    border-radius: 5px;
+}
+  
+form.feedbackForm > h2 
+{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form.feedbackForm > div 
+{
+    margin-bottom: 20px;
+}
+
+form.feedbackForm > label 
+{
+    display: block;
+    margin-bottom: 5px;
+}
+
+form.feedbackForm  input[type="text"],
+form.feedbackForm  input[type="email"],
+form.feedbackForm  textarea 
+{
+     width: 95.2%;
+     padding: 8px;
+     border: 1px solid #ccc;
+     border-radius: 3px;
+}
+
+form.feedbackForm  textarea 
+{
+  resize: vertical;
+}
+
+form.feedbackForm  button[type="submit"] 
+{
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #0b8baf;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+form.feedbackForm  button[type="submit"]:hover 
+{
+    background-color: #0c7295;
+}
+
+
+/* css for responsive layout of website */
+
+@media only screen and (max-width:1440px) 
+{
+
+}
+@media only screen and (max-width: 1280px)  
+{
+    
+}
+@media only screen and (max-width: 1024px)  
+{
+    div.applications > div, 
+    div.applications > div:nth-child(odd) 
+    {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    header.indexHeader > nav > menu > li
+    {
+        padding: 0 7px;
+        font-size: 1.19em;
+    }
+    div.productPricing > div:nth-child(2)
+    {
+        flex-direction: column;
+    }
+    div.newProduct > div > img 
+    {
+        width: 345px;
+    }
+    .indexFooter > div > div
+    {
+        flex-basis: 30%;
+    }
+}
+@media only screen and (max-width:769px)  
+{
+    .indexBody
+    {
+        grid-template-columns:  100%;
+        grid-template-areas: 
+        "header"
+        "main"
+        "footer";
+    }
+    header.indexHeader > div:last-child
+    {
+        display: flex;
+        align-items: center;
+    }
+    header.indexHeader > nav > menu
+    {
+        display: none;
+        position: fixed;
+        right: 0;
+        margin: 42px 0 0 0;
+        width: 100%;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: #EFFAFD;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    header.indexHeader > nav > menu > li
+    {
+        margin: 5px 0;
+        text-align: center;
+    }
+    
+    div.newProduct > div > img 
+    {
+        height: 280px;
+    }
+    
+    .indexSide
+    {
+        display: none;
+    }
+    
+    .indexFooter > div >div
+    {
+        flex-basis: 50%;
+    }
+    footer
+    {
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: center;
+    }
+    .indexFooter > div > div
+    {
+        flex-basis: 30%;
+    }
+    section.formIntro > h1
+    {
+        font-size: 2.9em;
+    }
+
+    div.feedbackForm > div
+    {
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    div.feedbackForm > div > img
+    {
+        min-width: 14em;
+        max-width: 25em;
+        margin: 10px auto;
+    }
+    form.feedbackForm 
+    {
+        min-width: 14em;
+        max-width: 24em;
+        margin: 10px auto;
+    }
+}
+@media only screen and (max-width: 640px) 
+{
+    div.newProduct > div > img 
+    {
+        display: none;
+    }
+    div.applications > div > img
+    {
+        display: block;
+    }
+
+    div.newProduct > div.firstPara 
+    {
+        background-image: url('../img/websiteHead.png');
+        background-size: cover;
+        height: 335px;
+        position: relative;
+        border-radius: 5px;
+        padding: 2px;
+    }
+    div.newProduct > div.firstPara > div
+    {
+        background-color: rgba(0, 0, 0, 0.6);
+        color: #efefef;
+    } 
+    
+    div.newProduct > div.aboutUs
+    {
+        background-image: url('../img/gates_and_allen.jpg');
+        background-size: cover;
+        color: #efefef;
+    }
+    section.productIntro > div.laptopSize,
+    div.productRequirment > div:nth-child(2) > div,
+    div.productRequirment > div.phoneSize > div    
+    {
+        flex-direction: column;
+    }
+    div.productRequirment > div.phoneSize> div.window1_2 >p:nth-child(2) ,
+    div.productRequirment > div.phoneSize> div.window1_2 >p:nth-child(1)
+    {
+        width: 100%;
+    }
+    section.productIntro > div > h1 
+    {
+        font-size: 3.5em;
+    }
+    section.formIntro > h1
+    {
+        font-size: 2.9em;
+    }
+    
+    div.productRequirment > div.laptopSize
+    {
+        display: none;
+    }
+    div.productRequirment > div.phoneSize
+    {
+        display: flex;
+    }
+    .indexFooter > div > div
+    {
+        flex-basis: 80%;
+    }
+    div.feedbackForm > div > img
+    {
+        min-width: 14em;
+        max-width: 25em;
+        margin: 10px auto;
+    }
+    form.feedbackForm 
+    {
+        margin: 10px auto;
+        min-width: 13em;
+        max-width: 22em;
+    }
+}
+@media only screen and (max-width: 426px) 
+{
+    section.productIntro > div > h1 
+    {
+        font-size: 2.6em;
+    }
+    section.formIntro > h1
+    {
+        font-size: 2.9em;
+    }
+
+    div.applications > div > img
+    {
+        min-width: 13em;
+        max-width: 15em;
+    }
+    form.feedbackForm 
+    {
+        margin: 10px auto;
+        min-width: 13em;
+        max-width: 15em;
+    }
+    .formContainer 
+    {
+        max-width: 300px;
+    }
+
+    .indexFooter > div >div
+    {
+        flex-basis: 60%;
+    }
+    div.productPricing > div:nth-child(2) > div .btn
+    {
+        width: 200px;
+    }
+    div.productRequirment > div:nth-child(2) >div> p:first-child
+    {
+        width: 100%;
+    }
+    div.feedbackForm > div > img
+    {
+        min-width: 14em;
+        max-width: 19em;
+        margin: 10px auto;
+    }
+    form.feedbackForm 
+    {
+        margin: 10px auto;
+        min-width: 13em;
+        max-width: 16em;
+    }
+}
+@media only screen and (max-width: 320px) 
+{
+    section.productIntro > div > h1 
+    {
+        font-size: 2.3em;
+    }
+    form.feedbackForm 
+    {
+        margin: 10px auto;
+        min-width: 12em;
+        max-width: 15em;
+    }
+    .formContainer 
+    {
+        max-width: 200px;
+    }
+    div.feedbackForm > div > img
+    {
+        max-width: 16em;
+        margin: 10px auto;
+    }
+    form.feedbackForm 
+    {
+        margin: 10px auto;
+        max-width: 13em;
+    }
+}
+

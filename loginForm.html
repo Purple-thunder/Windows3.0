@@ -1,0 +1,45 @@
+<!-- this is login form -->
+<div id="loginForm" class="formContainer">
+    <button class="closeBtn" onclick="closeForm()">X</button>
+    <h2>Login</h2>
+
+<!-- form method="post" is not added because it will try to sent the form to backend which does not exist and create error -->
+    <form action="#" enctype="multipart/form-data">
+        
+        <div>
+            <label for="emailForm">Email:</label>
+            <input type="email" id="emailForm" name="email" required>
+        </div>
+        <div>
+            <label for="passwordForm">Password:</label>
+            <input type="password" id="passwordForm" name="password" required>
+        </div>
+        <div>
+            <label for="remember">Remember me:</label>
+            <input type="checkbox" id="remember" name="remember">
+        </div>
+        <input type="submit" value="Login">
+    </form>
+</div>
+
+<!-- this is signup form -->
+<div id="signupForm" class="formContainer">
+    <button class="closeBtn" onclick="closeForm()">X</button>
+    <h2>Sign Up</h2>
+<!-- form method="post" is not added because it will try to sent the form to backend which does not exist and create error -->
+    <form action="#" enctype="multipart/form-data" onsubmit="return myValidate();">
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div>
+            <label for="subPassword">Password:</label>
+            <input type="password" id="subPassword" name="subPassword" required>
+        </div>
+        <div>
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" required>
+        </div>
+        <input type="submit" value="Sign Up" >
+    </form>
+</div>    
