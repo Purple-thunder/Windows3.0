@@ -62,6 +62,7 @@ $(document).ready(function()
   $(function()
   {
     $('#footer').load('footer.html');
+    $('#head').load('head.html');
     $('header.indexHeader').load('header.html');
     $('div.backgroundBlur').load('loginForm.html');
   });
