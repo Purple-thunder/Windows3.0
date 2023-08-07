@@ -85,9 +85,12 @@ $(document).ready(function()
   // This function will map active content and heaing on aside
   $(window).scroll(function() 
   {
+
+    // scrollTop gets current scrol position of the screen in px
     var scrollPos = $(window).scrollTop();
     $('section').each(function() 
     {
+      // following two lines will calculate the height of the active section 
       var sectionTop = $(this).offset().top - 100; 
       var sectionBottom = sectionTop + $(this).outerHeight();
 
