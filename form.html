@@ -43,7 +43,8 @@
             <div class="feedbackForm">
                 <div>
                     <img src="./img/contactUs.png" alt="contact us">
-                    <form class="feedbackForm">
+<!--------- form method="post" is not added because it will try to sent the form to backend which does not exist and create error --------->
+                    <form class="feedbackForm" action="#" enctype="multipart/form-data">
                         <h2>Contact Us</h2>
                         <div>
                             <label for="name">Name *</label>
